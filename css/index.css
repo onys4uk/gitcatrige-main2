@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('../fonts/Mulish-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #363740;
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+}
+.container{
+  background-color: #A296DC;
+  width: 380px;
+  height: 582px;
+  border-radius: 8px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-text{
+  display: contents;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+.index-text{
+  margin-top: 32px;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.name-text{
+  margin-top: 10px;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.help-text{
+  margin-top: 12px;
+  margin-bottom: 40px;
+  color: black;
+  text-align: center;
+}
+label{
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+button{
+  background-color: #04AA6D;
+  cursor: pointer;
+  color: #FFF;
+  font-weight: 600;
+  width: 316px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #04AA6D;
+  margin-bottom: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+input, select{
+  outline: 0;
+  width: 290px;
+  border-radius: 8px;
+  height: 42px;
+  margin-bottom: 24px;
+  border: 1px solid #F0F1F7;
+  line-height: 1;
+  padding: 4px 12px 4px 12px;
+  font-size: 14px;
+}
+.copy-text{
+  color: black;
+  text-align: center;
+}
+.danger-text{
+  color: #F7685B;
+  text-align: center;
+}
+#MyLogin
+{
+  width: 316px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 98vw;
+    min-width: unset;
+    height: auto;
+    padding: 10px 0;
+    border-radius: 0;
+    position: static;
+    top: unset;
+    left: unset;
+    transform: none;
+    margin: 0 auto;
+  }
+  .container-logo img {
+    max-width: 80vw;
+    height: auto;
+  }
+  .index-text, .name-text {
+    font-size: 18px;
+    margin-top: 16px;
+  }
+  .help-text {
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  label {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  button {
+    width: 95vw;
+    min-width: unset;
+    height: 42px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  input, select {
+    width: 90vw;
+    min-width: unset;
+    height: 38px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  #MyLogin {
+    width: 95vw;
+  }
+}

@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================== HEADER ===================== */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    background: #333333;
+    padding: 0 28px;
+    height: 80px;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.35);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-width: 0;
+}
+
+/* Лого */
+.header-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-logo img {
+    height: 52px;
+    width: auto;
+}
+
+.header-logo a {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.18s;
+}
+
+.header-logo a:hover {
+    opacity: 0.82;
+}
+
+/* Навігація */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.07);
+    transition: background 0.18s, border-color 0.18s;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.55);
+    color: #fff;
+}
+
+.nav-link.active {
+    background: #04AA6D;
+    border-color: #04AA6D;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(4, 170, 109, 0.4);
+}
+
+.nav-icon {
+    font-size: 17px;
+    line-height: 1;
+}
+
+/* Права частина: юзер + вихід */
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Бейдж користувача — НЕ кнопка, просто інформація */
+.user-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: default;
+    user-select: none;
+}
+
+.user-icon {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+/* Кнопка виходу — чітко червона, виразна */
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: #d63031;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1.5px solid #ff4d4d;
+    box-shadow: 0 2px 8px rgba(214, 48, 49, 0.35);
+    transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+}
+
+.logout-btn:hover {
+    background: #ff4d4d;
+    box-shadow: 0 4px 14px rgba(214, 48, 49, 0.5);
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+.logout-btn:active {
+    transform: translateY(0);
+}
+
+/* ===================== МОБІЛЬНА ВЕРСІЯ ===================== */
+@media (max-width: 900px) {
+    header {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+        padding: 10px 16px;
+        gap: 8px;
+    }
+
+    .header-logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .header-user {
+        grid-column: 2;
+        grid-row: 1;
+        justify-content: flex-end;
+    }
+
+    .header-nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 6px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 8px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+
+    .user-badge {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .logout-btn {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        grid-template-columns: 1fr;
+        padding: 10px 12px;
+    }
+
+    .header-logo {
+        grid-column: 1;
+        justify-content: center;
+    }
+
+    .header-user {
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: center;
+    }
+
+    .header-nav {
+        grid-column: 1;
+        grid-row: 3;
+        justify-content: center;
+    }
+
+    .header-logo img {
+        height: 40px;
+    }
+}
+
+
+/*home.php*/
+.home div {
+    margin: 10px;
+}
+
+.home input,
+button,
+select {
+    padding: 5px;
+    font-size: 18pt;
+}
+
+.home .SearchCatrige input {
+    width: 99.4%;
+    border-radius: 5px;
+    border: 0.5px solid gainsboro;
+}
+
+.home button {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #04AA6D;
+    width: 140px;
+    cursor: pointer;
+}
+
+.home table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.home tr {
+    border: 1px solid gray;
+    font-size: 16pt;
+    text-align: left;
+}
+
+.home thead tr {
+    background-color: #F1F1F1;
+}
+
+.home td {
+    padding: 12px;
+    text-align: center;
+}
+
+#WriteOff {
+    background-color: red;
+}
+
+/* catrige.php */
+.home h2 {
+    text-align: center;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* history.php */
+.SearchDate .SearchCatrige input,
+.SearchDate .SearchCatrige select {
+    display: inline-block;
+    width: 26%;
+}
+
+.history h2 {
+    cursor: pointer;
+}
+
+/* .SearchDate .SearchCatrige select option:first-child
+{
+    display: none;
+} */
+.SearchDate .SearchCatrige label {
+    font-size: 16pt;
+}
+
+.SearchDate,
+.SearchBarcode {
+    display: none;
+}
+
+/* Стиль для кнопки "Пошук по штрих коду" та "Додати картридж" */
+.search-barcode-btn {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 22px 0;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-weight: bold;
+    margin: 0 auto 20px auto;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.search-barcode-btn:hover,
+.search-barcode-btn:focus {
+    background: #f5f5f5;
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    header {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin: 0 auto 10px auto;
+        text-align: center;
+    }
+
+    .top_menu ul {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    header li {
+        display: block;
+        font-size: 16pt;
+        margin: 0;
+    }
+
+    header li a {
+        padding: 8px;
+        font-size: 16pt;
+    }
+
+    .home div {
+        margin: 5px;
+    }
+
+    .home input,
+    button,
+    select {
+        font-size: 14pt;
+        padding: 4px;
+    }
+
+    .home .SearchCatrige input {
+        width: 98%;
+        font-size: 14pt;
+    }
+
+    .home button {
+        width: 100%;
+        font-size: 14pt;
+        padding: 8px 0;
+    }
+
+    .home table,
+    .home tr,
+    .home td {
+        font-size: 12pt;
+        padding: 6px;
+    }
+
+    .home table,
+    .home thead,
+    .home tbody,
+    .home tr,
+    .home td {
+        display: block;
+        width: 100%;
+    }
+
+    .home thead {
+        display: none;
+    }
+
+    .home tr {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        background: #fff;
+    }
+
+    .home td {
+        text-align: left;
+        padding-left: 40%;
+        position: relative;
+        min-height: 30px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .home td:before {
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        width: 35%;
+        white-space: nowrap;
+        font-weight: bold;
+        font-size: 12pt;
+    }
+
+    /* Вказати назви колонок для мобільної версії */
+    .home tr td:nth-child(1):before {
+        content: "ID";
+    }
+
+    .home tr td:nth-child(2):before {
+        content: "Назва картриджа";
+    }
+
+    .home tr td:nth-child(3):before {
+        content: "Марка";
+    }
+
+    .home tr td:nth-child(4):before {
+        content: "Користувач";
+    }
+
+    .home tr td:nth-child(5):before {
+        content: "Принтер";
+    }
+
+    .home tr td:nth-child(6):before {
+        content: "Статус";
+    }
+
+    .home tr td:nth-child(7):before {
+        content: "Дата";
+    }
+
+    .home tr td:nth-child(8):before {
+        content: "";
+    }
+
+    .home tr td:nth-child(9):before {
+        content: "";
+    }
+
+    .home h2 {
+        font-size: 16pt;
+        padding: 8px;
+    }
+
+    .SearchDate .SearchCatrige input,
+    .SearchDate .SearchCatrige select {
+        width: 100%;
+        margin-bottom: 8px;
+        font-size: 14pt;
+    }
+
+    .SearchDate .SearchCatrige label {
+        font-size: 14pt;
+        margin-bottom: 2px;
+    }
+
+    .FindCatrige {
+        overflow-x: auto;
+    }
+}
